@@ -16,8 +16,8 @@ public class CountryServiceImpl implements CountryService {
     }
 
     @Override
-    public List<Country> getCountriesByCode(String code) {
-        return this.countryRepository.findAllByCountryCode(code);
+    public Country getCountryByCode(String code) {
+        return this.countryRepository.findByCountryCode(code);
     }
 
     @Override
@@ -28,6 +28,11 @@ public class CountryServiceImpl implements CountryService {
     @Override
     public long count() {
         return this.countryRepository.count();
+    }
+
+    @Override
+    public boolean exists(String countryCode) {
+        return this.countryRepository.existsByCountryCode(countryCode);
     }
 
 

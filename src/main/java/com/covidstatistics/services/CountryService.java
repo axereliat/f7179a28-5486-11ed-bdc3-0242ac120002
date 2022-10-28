@@ -6,9 +6,11 @@ import java.util.List;
 
 public interface CountryService {
 
-    List<Country> getCountriesByCode(String code);
+    Country getCountryByCode(String code);
 
     void saveAll(List<Country> countries);
 
     long count();
+
+    boolean exists(String countryCode);
 }
