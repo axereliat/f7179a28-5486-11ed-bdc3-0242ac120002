@@ -9,4 +9,6 @@ public interface CountryService {
     List<Country> getCountriesByCode(String code);
 
     void saveAll(List<Country> countries);
+
+    long count();
 }

@@ -1,6 +1,9 @@
 package com.covidstatistics.domain.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -10,6 +13,9 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "countries")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Country {
 
     @Id
